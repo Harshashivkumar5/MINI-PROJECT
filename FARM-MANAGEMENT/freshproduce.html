@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Produce</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Fresh Produce</h1>
+        <div id="header-right">
+            <button id="cart-btn" onclick="toggleCart()">Cart (0)</button>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="ka">kannada</option>
+            </select>
+        </div>
+    </header>
+    
+    <!-- Product Listings for Fresh Produce -->
+    <section id="product-list">
+        <h2>Happy Shopping</h2>
+        <div class="Vegetables">
+            <img src="url(../image\Onion.jpg)" alt="Fresh Onion  ">
+            <h3>Fresh Onion </h3>
+            <p>Price: $10 per kg</p>
+            <button onclick="addToCart('Fresh Onion', 10)">Add to Cart</button>
+        </div>
+        <div class="Vegetables">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Potato ">
+            <h3>Fresh potato </h3>
+            <p>Price: $6 per kg</p>
+            <button onclick="addToCart('Fresh Potato', 6)">Add to Cart</button>
+        </div>
+        <div class="Vegetables">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Tomato ">
+            <h3>Fresh Tomato </h3>
+            <p>Price: $8 per kg</p>
+            <button onclick="addToCart('Fresh Tomato', 8)">Add to Cart</button>
+        </div>
+        <div class="Vegetables">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Beans ">
+            <h3>Fresh Beans </h3>
+            <p>Price: $5 per kg</p>
+            <button onclick="addToCart('Fresh Beans', 5)">Add to Cart</button>
+        </div>
+        <div class="Vegetables">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Beetrot">
+            <h3>Fresh Beetrot </h3>
+            <p>Price: $4 per kg</p>
+            <button onclick="addToCart('Fresh Beetrot', 4)">Add to Cart</button>
+        </div>
+        <div class="Vegetables">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Cabbaige">
+            <h3>Fresh Cabbaige</h3>
+            <p>Price: $4 per kg</p>
+            <button onclick="addToCart('Fresh Cabbaige', 4)">Add to Cart</button>
+        </div>
+
+        <div class="Fruits">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Apples ">
+            <h3>Fresh Apples</h3>
+            <p>Price: $15 per kg</p>
+            <button onclick="addToCart('Fresh Apples ', 15)">Add to Cart</button>
+        </div>
+        <div class="Fruits">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Guava ">
+            <h3>Fresh Guava</h3>
+            <p>Price: $9 per kg</p>
+            <button onclick="addToCart('Fresh Guava', 9)">Add to Cart</button>
+        </div>
+        <div class="Fruits">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Orange ">
+            <h3>Fresh Orange </h3>
+            <p>Price: $5 per kg</p>
+            <button onclick="addToCart('Fresh Orange', 5)">Add to Cart</button>
+        </div>
+        <div class="Fruits">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Banana ">
+            <h3>Fresh Banana </h3>
+            <p>Price: $2 per kg</p>
+            <button onclick="addToCart('Fresh Banana', 2)">Add to Cart</button>
+        </div>
+        <div class="Fruits">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh Pineapple ">
+            <h3>Fresh Pineapple</h3>
+            <p>Price: $6 per kg</p>
+            <button onclick="addToCart('Fresh Pineapple ', 6)">Add to Cart</button>
+        </div>
+        <div class="Fruits">
+            <img src="path-to-image/fresh-produce1.jpg" alt="Fresh grapes ">
+            <h3>Fresh grapes</h3>
+            <p>Price: $10 per kg</p>
+            <button onclick="addToCart('Fresh grapes', 10)">Add to Cart</button>
+        </div>
+
+    </section>
+
+    <!-- Cart Section (Initially hidden) -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be listed here dynamically -->
+        </ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+    </section>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>
