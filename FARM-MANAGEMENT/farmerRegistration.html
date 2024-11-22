@@ -18,31 +18,37 @@
         </div>
     </header>
 
-    <!-- Registration Form for Farmer -->
-    <section id="registration">
-        <h2>Register as a Farmer</h2>
-        <form id="registrationForm" onsubmit="event.preventDefault(); registerFarmer();">
-            <label for="regName">Name:</label>
-            <input type="text" id="regName" name="regName" required>
-            
-            <label for="regPassword">Password:</label>
-            <input type="password" id="regPassword" name="regPassword" required>
-            
-            <label for="regFarmSize">Farm Size (in acres):</label>
-            <input type="number" id="regFarmSize" name="regFarmSize" required>
-            
-            <label for="regCrops">Crops Grown:</label>
-            <input type="text" id="regCrops" name="regCrops" required>
-            
-            <button type="submit">Register</button>
-        </form>
+    <!-- Registration and Login Selection -->
+    <section id="selection">
+    <h2>Welcome!</h2>
+    <button id="createAccountBtn" onclick="showForm('createAccount')">Create An Account</button>
+    <button id="loginBtn" onclick="showForm('login')">Login</button>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Farmer Management System. All rights reserved.</p>
-    </footer>
-
+    <!-- Farmer Registration Form -->
+    <section id="createAccountForm" class="form-section" style="display: none;">
+    <h2>Register as a Farmer</h2>
+    <form id="registrationForm" onsubmit="event.preventDefault(); registerFarmer();">
+    <label for="regName">Name:</label>
+    <input type="text" id="regName" name="regName" required>
+    <label for="regPassword">Password:</label>
+    <input type="password" id="regPassword" name="regPassword" required>
+    <label for="regFarmSize">Farm Size (in acres):</label>
+    <input type="number" id="regFarmSize" name="regFarmSize" required>
+    <label for="regCrops">Crops Grown:</label>
+    <input type="text" id="regCrops" name="regCrops" required>
+    <button type="submit">Register</button> </form> </section>
+    
+    <!-- Login Form -->
+    
+    <section id="loginForm" class="form-section" style="display: none;">
+    <h2>Login</h2> <form onsubmit="event.preventDefault(); loginUser();">
+    <label for="loginName">Name:</label>
+    <input type="text" id="loginName" name="loginName" required>
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="loginPassword" required>
+    <button type="submit">Login</button>
+    </form>
+    </section>
     <!-- Include JavaScript file -->
     <script src="farmerRegistration.js"></script>
 </body>

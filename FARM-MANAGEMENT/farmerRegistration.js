@@ -1,32 +1,32 @@
 
-// Handle farmer registration
-function registerFarmer() {
-    const regName = document.getElementById('regName').value;
-    const regPassword = document.getElementById('regPassword').value;
-    const regFarmSize = document.getElementById('regFarmSize').value;
-    const regCrops = document.getElementById('regCrops').value;
-
-    // Simple registration validation
-    if (regName && regPassword && regFarmSize && regCrops) {
-        // Store registration details in local storage for farmers
-        let farmers = JSON.parse(localStorage.getItem('farmers')) || [];
-        farmers.push({
-            username: regName,
-            password: regPassword,
-            farmSize: regFarmSize,
-            crops: regCrops
-        });
-        localStorage.setItem('farmers', JSON.stringify(farmers));
-
-        alert('Farmer registration successful!');
-        // Redirect to login page or another appropriate page
-        window.location.href = 'index.html';
-    } else {
-        alert('Please fill in all fields!');
+// Function to show the appropriate form
+function showForm(formType) {
+    document.getElementById('createAccountForm').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'none';
+    
+    if (formType === 'createAccount') {
+        document.getElementById('createAccountForm').style.display = 'block';
+    } else if (formType === 'login') {
+        document.getElementById('loginForm').style.display = 'block';
     }
 }
 
-// Add event listener to the register button after DOM has loaded
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('button').addEventListener('click', registerFarmer);
-});
+function registerFarmer() {
+    const name = document.getElementById('regName').value;
+    const password = document.getElementById('regPassword').value;
+    const farmSize = document.getElementById('regFarmSize').value;
+    const crops = document.getElementById('regCrops').value;
+
+    // Simulate registration process
+    alert('Registration successful! Welcome, Farmer ' + name);
+    // You can add redirection or further processing here
+}
+
+function loginUser() {
+    const name = document.getElementById('loginName').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Simulate login process
+    alert('Login successful! Welcome back, ' + name);
+    // You can add redirection or further processing here
+}
